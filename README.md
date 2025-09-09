@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 自己分析ツール - エピソードと強みの可視化アプリ
 
-## Getting Started
+## �� プロジェクト概要
 
-First, run the development server:
+就活における自己分析を効率化するためのWebアプリケーションです。自分のエピソード（経験談）と強みを関連付け、レベル付きのタグ機能とフィルタリング機能により、面接やエントリーシートで必要な情報を素早く引き出せるツールです。
+
+## 🎯 開発のきっかけ
+
+就活の自己分析において、以下の課題を感じていました：
+- 一つのエピソードに複数の強みを関連付けたい
+- 同じ強みでも、エピソードによって発揮レベルが異なる
+- 特定の強みでフィルタリングして、レベル順で並べたい
+- 既存のツールではこれらの機能が統合されていない
+
+これらの課題を解決するため、AI駆動開発に挑戦し、**1日で完成**させました。
+
+## ✨ 主な機能
+
+### �� 強みの管理
+- カスタム強みの追加・編集・削除
+- 強みごとの説明文設定
+
+### �� エピソード管理
+- エピソードの追加・編集・削除
+- 複数の強みとの関連付け
+- **レベル付きスコアリング**（1-5段階）
+
+### �� 高度なフィルタリング
+- 特定の強みでエピソードをフィルタリング
+- スコア順での自動ソート
+- リアルタイム検索
+
+### 💾 データ永続化
+- Firebase Firestoreによるクラウド保存
+- 複数デバイス間での同期
+
+## ��️ 技術スタック
+
+- **フロントエンド**: Next.js 15, React 19, TypeScript
+- **スタイリング**: Tailwind CSS
+- **バックエンド**: Firebase Firestore
+- **開発手法**: AI駆動開発（ChatGPT/Cursor）
+
+## �� セットアップ
 
 ```bash
+# リポジトリのクローン
+git clone [repository-url]
+cd selfanalysis
+
+# 依存関係のインストール
+npm install
+
+# 環境変数の設定
+# .env.local ファイルを作成し、Firebase設定を追加
+
+# 開発サーバーの起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💡 就活での活用方法
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### エントリーシート作成
+- 「リーダーシップ」でフィルタリング → 関連エピソードを即座に確認
+- スコア順で並ぶため、最もアピールできるエピソードを選択
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 面接準備
+- 想定質問に対するエピソードの引き出し練習
+- 強みのレベル感を事前に整理
 
-## Learn More
+### 自己分析の深化
+- 意外な強みの発見
+- エピソードの多角的な分析
 
-To learn more about Next.js, take a look at the following resources:
+## �� 開発で学んだこと
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### AI駆動開発の実践
+- 適切なプロンプト設計の重要性
+- エラー解決におけるAIとの協働
+- 1日でのプロトタイプ開発の可能性
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 技術的学び
+- Firebase Firestoreの実装
+- TypeScriptの型定義設計
+- Reactの状態管理
 
-## Deploy on Vercel
+## �� 今後の展望
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+現在は最低限の機能を実装した状態ですが、将来的には以下の拡張を検討：
+- ユーザー認証機能
+- データのエクスポート機能
+- より直感的なUI/UX
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📊 プロジェクトの特徴
+
+- **開発期間**: 1日（AI駆動開発）
+- **コード量**: 約500行
+- **主要ファイル**: 8ファイル
+- **使用技術**: 6つの主要技術
+
+## 🤝 就活でのアピールポイント
+
+1. **問題解決能力**: 既存ツールの課題を特定し、解決策を実装
+2. **技術力**: 最新技術スタックを活用した実装
+3. **効率性**: AI駆動開発による短期間での完成
+4. **実用性**: 実際の就活で活用できる実用的なツール
+
+---
+
+*このプロジェクトは、就活における自己分析の効率化を目指して開発されました。AI駆動開発の可能性と、問題解決のための技術活用を学ぶ貴重な経験となりました。*
